@@ -1,1 +1,1 @@
-uvicorn face-api:app
+web: uvicorn face-api:app
