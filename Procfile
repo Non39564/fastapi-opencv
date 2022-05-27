@@ -1,1 +1,1 @@
-web: uvicorn fast-api:app --reload
+web: uvicorn face-api:app --reload
