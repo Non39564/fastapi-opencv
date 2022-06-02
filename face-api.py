@@ -19,6 +19,10 @@ app.add_middleware(
 # Load face names and encoding from pickle
 classNames, known_face_encodings = pickle.load(open('faces.p', 'rb'))
 
+@app.get("/")
+def start():
+    return "Hello"
+
 @app.post("/faces_recognition/")
 async def faces_recognition(image_upload: UploadFile = File(...)):
     data = await image_upload.read()
